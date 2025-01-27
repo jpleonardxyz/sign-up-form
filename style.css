@@ -1,9 +1,18 @@
+@font-face {
+    font-family: 'norsebold';
+    src: url('fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* skeleton of page */
 body {
     display: flex;
     flex-direction: row;
@@ -11,6 +20,12 @@ body {
 
 .splash {
     flex: 1;
+    height: 100vh;
+    position: relative;
+}
+
+.splash-image{
+    width: 100%;
     height: 100vh;
 }
 
@@ -25,4 +40,44 @@ body {
 .form-container,
 .button-container {
     flex: 1;
+}
+
+/* Splash image section */
+.logo {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 200px;
+    width: 100%;
+}
+
+.logo>p {
+   color: white;
+   margin-left: 10px;
+   font-family: norsebold;
+   font-size: 72px;
+}
+
+.logo>img {
+    height: 100px;
+    width: auto;
+}
+
+.attribution {
+    background: none;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+}
+
+a,
+a:visited {
+    color: white;
 }
